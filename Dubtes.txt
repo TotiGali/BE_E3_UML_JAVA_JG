@@ -1,0 +1,4 @@
+Dubtes per 29/04/2024:
+
+1- Com crear una llista de reserves per cada client y una llista de totes les reserves
+2- Com fer que en la reserva surti la Sala i el client

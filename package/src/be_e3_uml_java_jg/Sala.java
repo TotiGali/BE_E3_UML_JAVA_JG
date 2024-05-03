@@ -4,6 +4,8 @@
  */
 package be_e3_uml_java_jg;
 import java.util.Date;
+import java.util.*;
+
 
 
 /**
@@ -14,12 +16,12 @@ public class Sala {
     private int id;
     private Float superficieM2;
     private int capacidad;
-    private Boolean disponibilidad;
+    private String disponibilidad;
     private String ubicacion;
     private String equipamiento;
     private String descripcion;
     
-    public Sala (int id, Float superficieM2, int capacidad, Boolean disponibilidad, String ubicacion, String equipamiento, String descripcion){
+    public Sala (int id, Float superficieM2, int capacidad, String disponibilidad, String ubicacion, String equipamiento, String descripcion){
         this.id = id;
         this.superficieM2 = superficieM2;
         this.capacidad = capacidad;
@@ -31,6 +33,10 @@ public class Sala {
     
     //métodes getters
     
+    public int getId(){
+        return id;
+    }
+    
     public Float getSuperficieM2(){
         return superficieM2;
     }
@@ -39,7 +45,7 @@ public class Sala {
         return capacidad;
     }
 
-    public Boolean getDisponibilidad(){
+    public String getDisponibilidad(){
         return disponibilidad;
     }
 

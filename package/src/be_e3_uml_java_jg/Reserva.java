@@ -4,6 +4,10 @@
  */
 package be_e3_uml_java_jg;
 import java.util.Date;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  *
@@ -17,14 +21,15 @@ public class Reserva {
     private Date fechaReservaFin;
     private int horaInicio;
     private int horaFin;
-    private String sala;
+    private Sala sala;
     private float precio;
     private String estadoReserva;
-    private String usuario;
+    private Client client;
     private String codigoReserva;
+    private static List<Reserva> todasReservas = new ArrayList<>();
     
     // Constructor de Reserva
-    public Reserva(int id, Date fechaReservaInicio, Date fechaReservaFin, int horaInicio, int horaFin, String sala, float precio, String estadoReserva, String usuario, String codigoReserva) {
+    public Reserva(int id, Date fechaReservaInicio, Date fechaReservaFin, int horaInicio, int horaFin, Sala sala, float precio, String estadoReserva, Client client, String codigoReserva) {
         this.id = id;
         this.fechaReservaInicio = fechaReservaInicio;
         this.fechaReservaFin = fechaReservaFin;
@@ -33,8 +38,9 @@ public class Reserva {
         this.sala = sala;
         this.precio = precio;
         this.estadoReserva = estadoReserva;
-        this.usuario = usuario;
+        this.client = client;
         this.codigoReserva = codigoReserva;
+        todasReservas.add(this);
     }
 
     // Getters de reserva
@@ -58,9 +64,12 @@ public class Reserva {
         return horaFin;
     }
 
-    public String getSala() {
-        return sala;
+    public static List<Reserva> getListaTodasReservas(){
+        return todasReservas;
     }
+    
+    
+    //he esborrat el get de sala
 
     public float getPrecio() {
         return precio;
@@ -70,8 +79,10 @@ public class Reserva {
         return estadoReserva;
     }
 
-    public String getUsuario() {
-        return usuario;
+    //he esborrat el get de usuari
+    
+    public Client getClient(){
+        return client;
     }
 
     public String getCodigoReserva() {
@@ -79,5 +90,6 @@ public class Reserva {
     }
 
     // Métodos de Reserva 
+    
 }
 

@@ -9,9 +9,39 @@ import java.util.Date;
  *
  * @author jordi
  */
+import java.util.Date;
+import java.util.*;
+
+
 public class Report {
     private int id;
     private Date fechaReporte;
     private String descripcionReporte;
     private String reserva;
+    
+    // Constructor de Report
+    public Report(int id, Date fechaReporte, String descripcionReporte, String reserva) {
+        this.id = id;
+        this.fechaReporte = fechaReporte;
+        this.descripcionReporte = descripcionReporte;
+        this.reserva = reserva;
+    }
+    
+    // Getters de Report
+    public int getId() {
+        return id;
+    }
+
+    public Date getFechaReporte() {
+        return fechaReporte;
+    }
+
+    public String getDescripcionReporte() {
+        return descripcionReporte;
+    }
+
+    public String getReserva() {
+        return reserva;
+    }
 }
+

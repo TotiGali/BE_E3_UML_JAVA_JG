@@ -3,18 +3,24 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package be_e3_uml_java_jg;
+import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Date;
+
 
 /**
  *
  * @author jordi
  */
 public class Usuari {
-    private int id;
+    public int id;
     private String nom;
     private String cognom;
     private String rol;
     private String mail;
     private String contrasena;
+    public List<Reserva> listareservas;
     
     //Constructor de Usuari
     
@@ -25,10 +31,20 @@ public class Usuari {
         this.rol = rol;
         this.mail = mail;
         this.contrasena = contrasena;
+        this.listareservas = new ArrayList<>();
     }
     
     //Métodes de Usuari
+    //Iniciar sessió 
+    public boolean iniciarSesion(String correoIngresado, String contrasenaIngresada){
+		if(this.mail == correoIngresado && this.contrasena == contrasenaIngresada){
+			return true;
+		} else{
+			return false;
+		}
+	}
     
+    //getters
     public int getId(){
         return id;
     }
@@ -47,5 +63,6 @@ public class Usuari {
     public String getContrasena(){
         return contrasena;
     }
+    
+       
 }
-
